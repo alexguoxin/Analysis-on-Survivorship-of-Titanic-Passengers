@@ -14,10 +14,10 @@ The question this analysis trying to answer is if passenger class played a role 
 
 ## Hypothesis
 
-- Null Hypothesis: Same proportion of passengers survived in different passenger classes.
+- Null Hypothesis: The proportions of passengers survived in different passenger classes are the same.
 - Alternative Hypothesis: More passengers in higher classes survived than those in lower classes because preference was given to passengers in higher classes, or they took advantage of their privilege to get rescued.
 
 ## Plan of Action
-- Calculate the proportion of survivorship in each passenger class, and show the result in a table.
-- Visualization: bar chart to show the difference of survivorship in each passenger class side by side.
-- Perform a t-test and report the p value to see if the null hypothesis should be rejected or not.
+- Calculate the proportion of survivorship in each passenger class, and show the result in a table
+- Visualization: bar chart to show the difference of survivorship in each passenger class side by side
+- Perform a t-test and report the p value to see if the null hypothesis should be rejected or not
