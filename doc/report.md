@@ -5,14 +5,9 @@ date: "Dec 2017"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
-```{r, message=FALSE}
-library(knitr)
-library(coin)
-```
+
+
 
 ## Overview
 
@@ -30,9 +25,12 @@ My hypothesis is that more passengers in higher classes survived than those in l
 
 First, the proportion of survival and mortality for each passenger class was calculated and shown in the table below.
 
-```{r}
-kable(read.csv("results/proportion.csv"))
-```
+
+| pclass|  Survival| Mortality|
+|------:|---------:|---------:|
+|      1| 0.6191950| 0.3808050|
+|      2| 0.4296029| 0.5703971|
+|      3| 0.2552891| 0.7447109|
 
 Second, a bar chart showing the proportion of survival and mortality for each passenger class was created.
 
@@ -42,12 +40,14 @@ From the table and the bar chart, it is obvious that more passengers in higher c
 
 To see if there is a statistically significant difference in the survival/mortality between each passenger class, a Permutation test was performed and the result is shown below.
 
-```{r}
-titanic <- read.csv("results/cleaned_titanic.csv")
-titanic$survived <- as.factor(titanic$survived)
-titanic$pclass <- as.factor(titanic$pclass)
-  
-independence_test(titanic$survived ~ titanic$pclass)
+
+```
+## 
+## 	Asymptotic General Independence Test
+## 
+## data:  titanic$survived by titanic$pclass (1, 2, 3)
+## maxT = 10.251, p-value < 2.2e-16
+## alternative hypothesis: two.sided
 ```
 
 From the result above, the p-value (< 2.2e-16) is much less than the 5% significance level, so we can reject the null hypothesis that passenger class did not play a role in survivorship, i.e. passengers in higher classes did have more chance to survive than those in lower classes. Is it because preference was given to passengers in higher classes, or they took advantage of their privilege to get rescued？This project could not have a clear conclusion on the reason and it will be an interesting topic for future analysis.
