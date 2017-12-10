@@ -2,11 +2,11 @@
 # clean_titanic.R
 # Xin (ALex) Guo, Dec 2017
 #
-# This script reads in the original data, cleans the data by selecting variables needed and save a cleaned csv file to the 
-# specified output path. This script takes a path of the original csv file and a path for the cleaned csv as the variable 
+# This script reads in the original data, cleans the data by selecting variables needed and saves the cleaned data as a csv file
+# to the specified output path. This script takes a path of the original csv file and a path for the cleaned csv as the variable 
 # arguments.
 #
-# Usage: Rscript clean_titanic.R ../data/titanic.csv ../results/cleaned_titanic.csv
+# Usage: Rscript clean_titanic.R data/titanic.csv results/cleaned_titanic.csv
 
 library(tidyverse)
 
