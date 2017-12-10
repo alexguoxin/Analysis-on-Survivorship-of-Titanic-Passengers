@@ -6,7 +6,7 @@
 # to the specified output path. This script takes a path of the original csv file and a path for the cleaned csv as the variable 
 # arguments.
 #
-# Usage: Rscript clean_titanic.R data/titanic.csv results/cleaned_titanic.csv
+# Usage: Rscript src/clean_titanic.R data/titanic.csv results/cleaned_titanic.csv
 
 library(tidyverse)
 

@@ -6,7 +6,7 @@
 # and save the proportion table as a csv file to the specified output path. 
 # This script takes a path of the input csv file and a path of the output csv file for the proportion table as the variable arguments.
 #
-# Usage: Rscript analysis.R results/cleaned_titanic.csv results/proportion.csv
+# Usage: Rscript src/analysis.R results/cleaned_titanic.csv results/proportion.csv
 
 library(tidyverse)
 

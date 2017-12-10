@@ -7,7 +7,7 @@
 # This script takes a path of the input csv file of the proportion table 
 # and a path of the output figure as the variable arguments.
 #
-# Usage: Rscript bar_chart.R results/proportion.csv results/figure/bar_chart.png
+# Usage: Rscript src/bar_chart.R results/proportion.csv results/figure/bar_chart.png
 
 library(tidyverse)
 
