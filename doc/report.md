@@ -1,13 +1,14 @@
 ---
-title: "Analysis on Survivorship of Titanic Passengers"
-author: "Xin (Alex) Guo"
-date: "Dec 2017"
 output: github_document
 ---
 
 
 
 
+
+# Analysis on Survivorship of Titanic Passengers
+
+Xin (Alex) Guo, Dec 2017
 
 ## Overview
 
