@@ -20,4 +20,4 @@ The question this analysis trying to answer is if passenger class played a role 
 ## Plan of Action
 - Calculate the proportion of survivorship in each passenger class, and show the result in a table
 - Visualization: bar chart to show the proportion difference of survivorship in each passenger class side by side
-- Perform a t-test and report the p value to see if the null hypothesis should be rejected or not
+- Perform a Permutation test and report the p-value to see if the null hypothesis should be rejected or not
