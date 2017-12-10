@@ -45,7 +45,7 @@ Rscript src/analysis.R results/cleaned_titanic.csv results/proportion.csv
 Rscript src/bar_chart.R results/proportion.csv results/figure/bar_chart.png
 ```
 
-5. Type the following command to knit `report.Rmd`, which creates the final report and saves the `.md` file to the `doc` folder.
+5. Type the following command to knit `report.Rmd`, which creates the final report and saves a markdown file to the `doc` directory.
 
 ```
 Rscript -e 'ezknitr::ezknit("src/report.Rmd", out_dir = "doc")'
