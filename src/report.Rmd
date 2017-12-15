@@ -6,9 +6,10 @@ output: github_document
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-```{r, message=FALSE}
+```{r, message=FALSE, warning=FALSE}
 library(knitr)
 library(coin)
+library(dplyr)
 ```
 
 # Analysis on Survivorship of Titanic Passengers
@@ -32,8 +33,12 @@ My hypothesis is that more passengers in higher classes survived than those in l
 First, the proportion of survival and mortality for each passenger class was calculated and shown in the table below.
 
 ```{r}
-# generate a nice markdown table from the csv
-kable(read.csv("results/proportion.csv"))
+# read in the csv and make the column name meaningful
+table <- read.csv("results/proportion.csv") %>% 
+  select(Passenger_Class = pclass, everything())
+
+# generate a nice markdown table
+kable(table, align = "c")
 ```
 
 Second, a bar chart showing the proportion of survival and mortality for each passenger class was created.

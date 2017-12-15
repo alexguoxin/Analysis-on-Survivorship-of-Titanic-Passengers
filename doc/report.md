@@ -27,11 +27,11 @@ My hypothesis is that more passengers in higher classes survived than those in l
 First, the proportion of survival and mortality for each passenger class was calculated and shown in the table below.
 
 
-| pclass|  Survival| Mortality|
-|------:|---------:|---------:|
-|      1| 0.6191950| 0.3808050|
-|      2| 0.4296029| 0.5703971|
-|      3| 0.2552891| 0.7447109|
+| Passenger_Class | Survival  | Mortality |
+|:---------------:|:---------:|:---------:|
+|        1        | 0.6191950 | 0.3808050 |
+|        2        | 0.4296029 | 0.5703971 |
+|        3        | 0.2552891 | 0.7447109 |
 
 Second, a bar chart showing the proportion of survival and mortality for each passenger class was created.
 
