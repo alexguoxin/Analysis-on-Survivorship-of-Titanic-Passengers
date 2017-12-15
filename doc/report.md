@@ -39,7 +39,7 @@ Second, a bar chart showing the proportion of survival and mortality for each pa
 
 From the table and the bar chart, it is obvious that more passengers in higher classes survived than those in lower classes.
 
-To see if there is a statistically significant difference in the survival/mortality between each passenger class, a Permutation test was performed and the result is shown below.
+To see if there is a statistically significant difference in the proportion of survival/mortality between each passenger class, a Permutation test was performed and the result is shown below.
 
 
 ```
@@ -51,4 +51,8 @@ To see if there is a statistically significant difference in the survival/mortal
 ## alternative hypothesis: two.sided
 ```
 
-From the result above, the p-value (< 2.2e-16) is much less than the 5% significance level, so we can reject the null hypothesis that passenger class did not play a role in survivorship, i.e. passengers in higher classes did have more chance to survive than those in lower classes. Is it because preference was given to passengers in higher classes, or they took advantage of their privilege to get rescued？This project could not have a clear conclusion on the reason and it will be an interesting topic for future analysis.
+From the result above, the p-value (< 2.2e-16) is much less than the 5% significance level, so we can reject the null hypothesis that passenger class did not play a role in survivorship, i.e. passengers in higher classes did have more chance to survive than those in lower classes. 
+
+## Conclusion
+
+From the proportion table and bar chart, we can see clearly that more passengers in higher classes survived than those in lower classes. The result of the following Permutation test indicates that the difference in the proportion of survival/mortality between each passenger class is statistically significant. But is it because preference was given to passengers in higher classes, or they took advantage of their privilege to get rescued？This project could not have a clear conclusion on the reason and it will be an interesting topic for future analysis.
