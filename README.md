@@ -23,7 +23,51 @@ My hypothesis is that more passengers in higher classes survived than those in l
 
 ## Usage
 
-To run the full analysis, open the command line/terminal/Git bash and follow the steps below:
+### Required Environment and Packages
+
+- R, version 3.4.1
+- `tidyverse`
+- `coin`
+- `knitr`
+- `ezknitr`
+
+### Use Make
+
+If you are sure you have all the required environment and packages installed, you may use the Makefile to run the full analysis. Open the command line/terminal/Git bash and follow the steps below:
+
+1. Use command `cd` to change the current directory to where you want to store the project by typing
+
+```
+cd PATH_TO_WHERE_YOU_WANT_TO_STORE_THE_PROJECT
+```
+
+2. Clone the project repository to the current directory by typing
+
+```
+git clone https://github.com/alexguoxin/Survivorship-of-Titanic-Passengers.git
+```
+
+3. Use command `cd` to navigate to the project root directory
+
+```
+cd Survivorship-of-Titanic-Passengers/
+```
+
+4. Use the Makefile to run the full analysis by typing
+
+```
+make all
+```
+
+5. If you want to re-run the analysis, delete all files generated in the previous run before you re-run it by typing
+
+```
+make clean
+```
+
+### Use Docker
+
+If you are not sure you have all the required environment and packages installed, or you fail to run the Makefile, you could use the Docker image to run the full analysis. Open the command line/terminal/Git bash and follow the steps below:
 
 1. Use command `cd` to change the current directory to where you want to store the project by typing
 
@@ -45,7 +89,7 @@ git clone https://github.com/alexguoxin/Survivorship-of-Titanic-Passengers.git
 docker pull alexguoxin/survivorship-of-titanic-passengers
 ```
 
-5. Run the full analysis in a Docker container by typing
+5. Launch a Docker container and run the full analysis in the container by typing
 
 ```
 docker run --rm -v VOLUME_ON_YOUR_COMPUTER:VOLUME_ON_CONTAINER alexguoxin/survivorship-of-titanic-passengers make -C 'VOLUME_ON_CONTAINER' all
@@ -55,7 +99,7 @@ docker run --rm -v VOLUME_ON_YOUR_COMPUTER:VOLUME_ON_CONTAINER alexguoxin/surviv
 
 `VOLUME_ON_CONTAINER` is a path in docker container, e.g. `/home/Survivorship-of-Titanic-Passengers`.
 
-6. Delete all generated files before you re-run the analysis by typing
+6. If you want to re-run the analysis, delete all files generated in the previous run before you re-run it by typing
 
 ```
 docker run --rm -v VOLUME_ON_YOUR_COMPUTER:VOLUME_ON_CONTAINER alexguoxin/survivorship-of-titanic-passengers make -C 'VOLUME_ON_CONTAINER' clean
