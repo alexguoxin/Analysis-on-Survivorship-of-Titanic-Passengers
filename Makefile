@@ -2,7 +2,9 @@
 # Xin (Alex) Guo, Dec 2017
 # Completes analysis on survivorship of Titanic passengers from top to bottom (from raw data to rendering report)
 #
-# Usage: make all
+# Usage: 
+# make all
+# make clean
 
 # run all analysis
 all: doc/report.md
@@ -23,7 +25,7 @@ results/figure/bar_chart.png: results/proportion.csv src/bar_chart.R
 doc/report.md: src/report.Rmd results/proportion.csv results/figure/bar_chart.png results/cleaned_titanic.csv
 	Rscript -e "ezknitr::ezknit('src/report.Rmd', out_dir = 'doc')"
 
-# clean up intermediate files
+# delete intermediate files
 clean:
 	rm -f results/cleaned_titanic.csv
 	rm -f results/proportion.csv
