@@ -43,7 +43,7 @@ kable(table, align = "c")
 
 Second, a bar chart showing the proportion of survival and mortality for each passenger class was created.
 
-[](../results/figure/bar_chart.png)
+![](../results/figure/bar_chart.png)
 
 From the table and the bar chart, it is obvious that more passengers in higher classes survived than those in lower classes.
 
