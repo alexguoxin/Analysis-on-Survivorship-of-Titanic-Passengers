@@ -63,6 +63,6 @@ docker run --rm -v VOLUME_ON_YOUR_COMPUTER:VOLUME_ON_CONTAINER alexguoxin/surviv
 
 ## Dependency Diagram
 
-A dependency diagram of the Makefile using `makefile2graph` is shown below.
+A dependency diagram of the Makefile using [`makefile2graph`](https://github.com/lindenb/makefile2graph) is shown below.
 
 ![](Makefile.png)
