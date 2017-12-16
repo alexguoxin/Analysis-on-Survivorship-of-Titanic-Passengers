@@ -25,28 +25,44 @@ My hypothesis is that more passengers in higher classes survived than those in l
 
 To run the full analysis, open the command line/terminal/Git bash and follow the steps below:
 
-1. Use command `cd` to change the current directory to the project root directory `/Survivorship-of-Titanic-Passengers`
-
-2. Type the following command to run `clean_titanic.R`, which cleans the original data and saves the cleaned data as a csv file to the specified output path.
+1. Use command `cd` to change the current directory to where you want to store the project by typing
 
 ```
-Rscript src/clean_titanic.R data/titanic.csv results/cleaned_titanic.csv
+cd PATH_TO_WHERE_YOU_WANT_TO_STORE_THE_PROJECT
 ```
 
-3. Type the following command to run `analysis.R`, which calculates the proportion of survival and mortality for each passenger class and saves the proportion table as a csv file to the specified output path.
+2. Clone the project repository to the current directory by typing
 
 ```
-Rscript src/analysis.R results/cleaned_titanic.csv results/proportion.csv
+git clone https://github.com/alexguoxin/Survivorship-of-Titanic-Passengers.git
 ```
 
-4. Type the following command to run `bar_chart.R`, which creates a bar chart showing the proportion and saves it to the specified output path.
+3. If you do not have Docker installed yet, follow the instruction [here](https://docs.docker.com/engine/installation/) to install it.
+
+4. Pull the Docker image by typing
 
 ```
-Rscript src/bar_chart.R results/proportion.csv results/figure/bar_chart.png
+docker pull alexguoxin/survivorship-of-titanic-passengers
 ```
 
-5. Type the following command to knit `report.Rmd`, which creates the final report and saves a markdown file to the `doc` directory.
+5. Run the full analysis in a Docker container by typing
 
 ```
-Rscript -e 'ezknitr::ezknit("src/report.Rmd", out_dir = "doc")'
+docker run --rm -v VOLUME_ON_YOUR_COMPUTER:VOLUME_ON_CONTAINER alexguoxin/survivorship-of-titanic-passengers make -C 'VOLUME_ON_CONTAINER' all
 ```
+
+`VOLUME_ON_YOUR_COMPUTER` is the absolute path to the project root directory where you just cloned.
+
+`VOLUME_ON_CONTAINER` is a path in docker container, e.g. `/home/Survivorship-of-Titanic-Passengers`.
+
+6. Delete all generated files before you re-run the analysis by typing
+
+```
+docker run --rm -v VOLUME_ON_YOUR_COMPUTER:VOLUME_ON_CONTAINER alexguoxin/survivorship-of-titanic-passengers make -C 'VOLUME_ON_CONTAINER' clean
+```
+
+## Dependency Diagram
+
+A dependency diagram of the Makefile using `makefile2graph` is shown below.
+
+![](Makefile.png)
