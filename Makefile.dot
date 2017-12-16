@@ -1,0 +1,23 @@
+digraph G {
+n2[label="all", color="red"];
+n7[label="data/titanic.csv", color="green"];
+n3[label="doc/report.md", color="green"];
+n6[label="results/cleaned_titanic.csv", color="green"];
+n10[label="results/figure/bar_chart.png", color="green"];
+n5[label="results/proportion.csv", color="green"];
+n9[label="src/analysis.R", color="green"];
+n11[label="src/bar_chart.R", color="green"];
+n8[label="src/clean_titanic.R", color="green"];
+n4[label="src/report.Rmd", color="green"];
+n3 -> n2 ; 
+n6 -> n3 ; 
+n10 -> n3 ; 
+n5 -> n3 ; 
+n4 -> n3 ; 
+n7 -> n6 ; 
+n8 -> n6 ; 
+n5 -> n10 ; 
+n11 -> n10 ; 
+n6 -> n5 ; 
+n9 -> n5 ; 
+}
