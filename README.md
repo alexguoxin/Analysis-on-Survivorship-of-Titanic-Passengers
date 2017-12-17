@@ -77,7 +77,7 @@ If you are not sure you have all the required dependencies installed, or you fai
 2. Open the command line/terminal/Git bash. If you do not have package `packrat` installed yet, install it by typing
 
 ```
-Rscript -e "install.packages('ezknitr', repos = 'http://cran.us.r-project.org')"
+Rscript -e "install.packages('packrat', repos = 'http://cran.us.r-project.org')"
 ```
 
 3. Use `packrat` to install all required R packages by typing
