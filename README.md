@@ -24,7 +24,6 @@ My hypothesis is that more passengers in higher classes survived than those in l
 ## Project Dependencies
 
 - R, version 3.4.1
-- RStudio
 - R packages:
 	- `tidyverse`
 	- `coin`
@@ -67,23 +66,43 @@ make all
 make clean
 ```
 
-### Use Docker
+### Use `packrat` or Docker
 
-If you are not sure you have all the required dependencies installed, or you fail to run the Makefile, you could use the Docker image to run the full analysis. Open the command line/terminal/Git bash and follow the steps below:
+If you are not sure you have all the required dependencies installed, or you fail to run the Makefile, you could use `packrat` or the Docker image to run the full analysis. 
 
-1. Use command `cd` to change the current directory to where you want to store the project by typing
+#### Use `packrat`
+
+1. If you do not have R installed yet, follow the instruction [here](https://cran.r-project.org/) to install it.
+
+2. Open the command line/terminal/Git bash. If you do not have package `packrat` installed yet, install it by typing
+
+```
+Rscript -e "install.packages('ezknitr', repos = 'http://cran.us.r-project.org')"
+```
+
+3. Use `packrat` to install all required R packages by typing
+
+```
+Rscript -e "packrat::restore()"
+```
+
+4. Follow the steps 1-5 in "Use Make" to use the Makefile to run the full analysis.
+
+#### Use Docker
+
+1. If you do not have Docker installed yet, follow the instruction [here](https://docs.docker.com/engine/installation/) to install it.
+
+2. Open the command line/terminal/Git bash. Use command `cd` to change the current directory to where you want to store the project by typing
 
 ```
 cd PATH_TO_WHERE_YOU_WANT_TO_STORE_THE_PROJECT
 ```
 
-2. Clone the project repository to the current directory by typing
+3. Clone the project repository to the current directory by typing
 
 ```
 git clone https://github.com/alexguoxin/Survivorship-of-Titanic-Passengers.git
 ```
-
-3. If you do not have Docker installed yet, follow the instruction [here](https://docs.docker.com/engine/installation/) to install it.
 
 4. Pull the Docker image by typing
 
