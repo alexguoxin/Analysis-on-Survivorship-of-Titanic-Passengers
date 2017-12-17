@@ -23,11 +23,6 @@ Source: CRAN
 Version: 0.12.14
 Hash: f9a2a481350397e53b0768bf488329cd
 
-Package: TH.data
-Source: CRAN
-Version: 1.0-8
-Hash: 06a65803bc437e0e86280c425b850313
-
 Package: assertthat
 Source: github
 Version: 0.2.0.9000
@@ -218,27 +213,11 @@ Version: 0.1.1
 Hash: dc3b2de1720a22560510dccbdffe2c17
 Requires: broom, dplyr, lazyeval, magrittr, purrr, tibble, tidyr
 
-Package: modeltools
-Source: CRAN
-Version: 0.2-21
-Hash: 3dc03397b2a4375c8a5e5f09c8cf0ae1
-
-Package: multcomp
-Source: CRAN
-Version: 1.4-8
-Hash: 567147e7257cc1b38b22b34a8c6697c0
-Requires: TH.data, mvtnorm, sandwich
-
 Package: munsell
 Source: CRAN
 Version: 0.4.3
 Hash: f96d896947fcaf9b6d0074002e9f4f9d
 Requires: colorspace
-
-Package: mvtnorm
-Source: CRAN
-Version: 1.0-6
-Hash: 1f55cdac387721d4eda1126ac9aba73b
 
 Package: openssl
 Source: CRAN
@@ -329,12 +308,6 @@ Version: 0.3.2
 Hash: c69f7526520bad66fd2111ebe8b1364b
 Requires: httr, magrittr, selectr, xml2
 
-Package: sandwich
-Source: CRAN
-Version: 2.4-0
-Hash: 754ae8e02f70c5561f75f7a95ea452cc
-Requires: zoo
-
 Package: scales
 Source: CRAN
 Version: 0.5.0
@@ -401,8 +374,3 @@ Package: yaml
 Source: CRAN
 Version: 2.1.14
 Hash: c81230c3a7d9ba20607ad6b4331173d1
-
-Package: zoo
-Source: CRAN
-Version: 1.8-0
-Hash: df9711767f56f086e8a8d1f0fb926ff6
