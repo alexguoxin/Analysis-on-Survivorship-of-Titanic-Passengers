@@ -10,7 +10,7 @@ On April 15, 1912, the British passenger liner "Titanic" sank in the North Atlan
 
 ## Dataset
 
-The dataset used in this analysis, [`titanic.csv`](https://github.com/alexguoxin/Survivorship-of-Titanic-Passengers/blob/master/data/titanic.csv), is from [the list of datasets in MDS program](https://github.ubc.ca/ubc-mds-2017/datasets). It describes the survival status of 1,309 individual passengers on Titanic. The variables in the dataset are `pclass`, `survived`, `name`, `sex`, `age`, `sibsp`, `parch`, `ticket`, `fare`, `cabin`, `embarked`, `boat`, `body` and `home.dest`. `pclass` refers to the passenger class (1st, 2nd, 3rd), and is a proxy for socio-economic class. `survived` indicates the survivorship of the passenger with 1 being survived and 0 being perished. 
+The dataset used in this analysis, [`titanic.csv`](https://github.com/alexguoxin/Survivorship-of-Titanic-Passengers/blob/master/data/titanic.csv), is from [the list of datasets in MDS program](https://github.ubc.ca/ubc-mds-2017/datasets). It describes the survival status of 1,309 individual passengers on Titanic. There are 14 variables in the dataset. Variables were used in this project are `pclass` and `survived`. `pclass` refers to the passenger class (1st, 2nd, 3rd), and is a proxy for socio-economic class. `survived` indicates the survivorship of the passenger with 1 being survived and 0 being perished. 
 
 ## Hypothesis
 
@@ -21,19 +21,21 @@ My hypothesis is that more passengers in higher classes survived than those in l
 - Create a bar chart to show the proportion difference of survivorship in each passenger class side by side
 - Perform a Permutation test and report the p-value to see if the null hypothesis should be rejected or not
 
-## Usage
-
-### Required Environment and Packages
+## Project Dependencies
 
 - R, version 3.4.1
-- `tidyverse`
-- `coin`
-- `knitr`
-- `ezknitr`
+- RStudio
+- R packages:
+	- `tidyverse`
+	- `coin`
+	- `knitr`
+	- `ezknitr`
+
+## Usage
 
 ### Use Make
 
-If you are sure you have all the required environment and packages installed, you may use the Makefile to run the full analysis. Open the command line/terminal/Git bash and follow the steps below:
+If you are sure you have all the required dependencies installed, you may use the Makefile to run the full analysis. Open the command line/terminal/Git bash and follow the steps below:
 
 1. Use command `cd` to change the current directory to where you want to store the project by typing
 
@@ -67,7 +69,7 @@ make clean
 
 ### Use Docker
 
-If you are not sure you have all the required environment and packages installed, or you fail to run the Makefile, you could use the Docker image to run the full analysis. Open the command line/terminal/Git bash and follow the steps below:
+If you are not sure you have all the required dependencies installed, or you fail to run the Makefile, you could use the Docker image to run the full analysis. Open the command line/terminal/Git bash and follow the steps below:
 
 1. Use command `cd` to change the current directory to where you want to store the project by typing
 
@@ -95,9 +97,9 @@ docker pull alexguoxin/survivorship-of-titanic-passengers
 docker run --rm -v VOLUME_ON_YOUR_COMPUTER:VOLUME_ON_CONTAINER alexguoxin/survivorship-of-titanic-passengers make -C 'VOLUME_ON_CONTAINER' all
 ```
 
-`VOLUME_ON_YOUR_COMPUTER` is the absolute path to the project root directory where you just cloned.
+`VOLUME_ON_YOUR_COMPUTER` is the absolute local path to the project root directory where you just cloned.
 
-`VOLUME_ON_CONTAINER` is a path in docker container, e.g. `/home/Survivorship-of-Titanic-Passengers`.
+`VOLUME_ON_CONTAINER` is a path in the docker container where you want to link your local path to, e.g. `/home/Survivorship-of-Titanic-Passengers`.
 
 6. If you want to re-run the analysis, delete all files generated in the previous run before you re-run it by typing
 
